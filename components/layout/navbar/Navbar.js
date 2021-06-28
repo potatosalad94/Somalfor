@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.css";
+import styles from "./Navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -21,8 +21,8 @@ const Navbar = (props) => {
           <div className={styles.navbarLogo}>
             <Image
               src="/images/somalfor-logo.png"
-              width={200}
-              height={40}
+              width={150}
+              height={30}
               objectFit="contain"
               alt="Somalfor"
             />
