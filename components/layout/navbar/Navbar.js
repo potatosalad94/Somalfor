@@ -1,5 +1,7 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import styles from "./Navbar.module.scss";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import { MenuItems } from "./MenuItems";
@@ -14,21 +16,21 @@ const Navbar = (props) => {
     });
   };
 
+  const handleScrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <nav className={styles.navbarItems}>
-      <Link href="/">
-        <>
-          <div className={styles.navbarLogo}>
-            <Image
-              src="/images/somalfor-logo.png"
-              width={150}
-              height={30}
-              objectFit="contain"
-              alt="Somalfor"
-            />
-          </div>
-        </>
-      </Link>
+      <div className={styles.navbarLogo} onClick={handleScrollToTop}>
+        <Image
+          src="/images/somalfor-logo.png"
+          width={150}
+          height={30}
+          objectFit="contain"
+          alt="Somalfor"
+        />
+      </div>
 
       <div className={styles.navbarMenuIcon}>
         {active ? (
@@ -42,13 +44,22 @@ const Navbar = (props) => {
         className={
           !active
             ? `${styles.navbarMenu}`
-            : `${styles.navbarMenu} ${styles.active}`
+            : `${styles.navbarMenu} ${styles.selected}`
         }
       >
         {MenuItems.map((item) => (
           <li key={item.title}>
-            <Link href={item.url}>
-              <a className={styles.navLinks}>{item.title}</a>
+            <Link
+              className={styles.navLinks}
+              activeClass={styles.active}
+              spy={true}
+              to={item.to}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              onClick={handleMenuBurger}
+            >
+              <span>{item.title}</span>
             </Link>
           </li>
         ))}
