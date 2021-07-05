@@ -8,6 +8,10 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 h1,
 h2,
 h3,

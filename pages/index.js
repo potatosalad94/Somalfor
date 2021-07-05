@@ -1,31 +1,11 @@
+import About from "../components/layout/About";
+import Realisations from "../components/layout/Realisations";
+
 const Home = () => {
   return (
     <div>
-      <h1 id="about">Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1>Hello there!</h1>
-      <h1 id="contact">Hello there!</h1>
+      <About />
+      <Realisations />
     </div>
   );
 };

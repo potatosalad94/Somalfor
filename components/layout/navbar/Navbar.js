@@ -55,7 +55,7 @@ const Navbar = (props) => {
               spy={true}
               to={item.to}
               smooth={true}
-              offset={-70}
+              offset={-100}
               duration={500}
               onClick={handleMenuBurger}
             >

@@ -1,17 +1,18 @@
 export const MenuItems = [
   {
-    title: "About",
+    title: "A propos",
     to: "about",
-    cName: "navLinks",
   },
   {
-    title: "Services",
-    to: "services",
-    cName: "navLinks",
+    title: "Réalisations",
+    to: "realisations",
   },
   {
-    title: "Contact Us",
+    title: "Pourquoi",
+    to: "pourquoi",
+  },
+  {
+    title: "Contact",
     to: "contact",
-    cName: "navLinks",
   },
 ];

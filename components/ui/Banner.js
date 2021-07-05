@@ -17,9 +17,9 @@ const Banner = () => {
         <div className={styles.bannerText}>
           <p>
             <strong>Améliorer la qualité de vie à Madagascar</strong>, en
-            apportant
+            apportant&nbsp;
             <br className={styles.hide} />
-            notre expertise et notre
+            notre expertise et notre&nbsp;
             <br className={styles.hide} />
             expérience de l’eau.
           </p>
