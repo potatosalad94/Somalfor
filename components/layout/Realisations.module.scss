@@ -94,6 +94,10 @@
 @media screen and (max-width: 760px) {
   .realisations {
     margin-top: 28vh;
+    h1 {
+      // text-align: center;
+      margin: 0 11%;
+    }
   }
 
   .projects {
