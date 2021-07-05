@@ -12,6 +12,14 @@
   justify-content: space-between;
 }
 
+.projectDetails:first-child {
+  margin-right: 10px;
+}
+
+.projectDetails:last-child {
+  margin-left: 10px;
+}
+
 .projectDetails {
   position: relative;
   width: 530px;
@@ -67,8 +75,43 @@
   }
 }
 
+.projectVideo {
+  position: relative;
+  margin-top: 6vh;
+  padding-top: 56.25%;
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  iframe {
+    border-radius: 10px !important;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .realisations {
     margin-top: 28vh;
+  }
+
+  .projects {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .projectDetails:first-child {
+    margin: 0 0 10px 0;
+  }
+
+  .projectDetails:last-child {
+    margin: 15px 0 0 0;
+  }
+
+  .projectDetails {
+    width: 400px;
+    height: 400px;
   }
 }

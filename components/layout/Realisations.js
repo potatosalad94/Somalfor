@@ -1,5 +1,6 @@
 import styles from "./Realisations.module.scss";
 import Image from "next/image";
+import ReactPlayer from "react-player";
 
 const Realisations = () => {
   return (
@@ -56,6 +57,15 @@ const Realisations = () => {
             />
           </div>
         </div>
+      </div>
+      <div className={styles.projectVideo}>
+        <ReactPlayer
+          className={styles.reactPlayer}
+          width="100%"
+          height="100%"
+          url="https://www.youtube.com/watch?v=KfDecRwGvaI"
+          controls
+        />
       </div>
     </div>
   );
