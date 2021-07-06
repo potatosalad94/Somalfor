@@ -1,6 +1,8 @@
 import styles from "./Realisations.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 import ReactPlayer from "react-player";
+import Card from "../ui/Card";
+import { ProjectItem } from "../ui/ProjectItem";
 
 const Realisations = () => {
   return (
@@ -9,54 +11,9 @@ const Realisations = () => {
         Nos <span>réalisations</span> <br />à Madagascar
       </h1>
       <div className={styles.projects}>
-        <div className={styles.projectDetails}>
-          <div className={styles.projectContent}>
-            <div className={styles.projectInfo}>
-              <h3>
-                <strong>2019</strong>
-              </h3>
-
-              <ul>
-                <li>Durée du projet: 1 semaine</li>
-                <li>XX L d'eau extrait</li>
-                <li>XX personnes</li>
-                <li>XX machine</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <Image
-              src="/images/project-1.jpg"
-              layout="fill"
-              objectFit="cover"
-              alt="project-1"
-            />
-          </div>
-        </div>
-        <div className={styles.projectDetails}>
-          <div className={styles.projectContent}>
-            <div className={styles.projectInfo}>
-              <h3>
-                <strong>2021</strong>
-              </h3>
-
-              <ul>
-                <li>Durée du projet: 2 semaines</li>
-                <li>XX L d'eau extrait</li>
-                <li>XX personnes</li>
-                <li>XX machine</li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <Image
-              src="/images/project-2.jpg"
-              layout="fill"
-              objectFit="cover"
-              alt="project-1"
-            />
-          </div>
-        </div>
+        {ProjectItem.map((item) => {
+          return <Card key={item.id} info={item} />;
+        })}
       </div>
       <div className={styles.projectVideo}>
         <ReactPlayer
