@@ -1,6 +1,7 @@
 import Navbar from "./navbar/Navbar";
 import Banner from "../ui/Banner";
 import Pourquoi from "./Pourquoi";
+import Contact from "./Contact";
 import styles from "./Layout.module.css";
 import { Container } from "react-bootstrap";
 
@@ -13,6 +14,7 @@ const Layout = (props) => {
         <main className={styles.main}>{props.children}</main>
       </Container>
       <Pourquoi />
+      <Contact />
     </div>
   );
 };

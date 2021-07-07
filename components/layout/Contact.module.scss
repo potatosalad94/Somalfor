@@ -1,0 +1,78 @@
+.container {
+  background-color: #7184ff;
+  // padding: 16vh 0;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.cardContainer {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  strong {
+    font-weight: 900;
+    color: rgb(110, 94, 254);
+  }
+  // form {
+  //   justify-content: center;
+  // }
+}
+
+.appFormGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    width: 340px;
+    background-color: white;
+    border: none;
+    margin: 17px 0;
+    border-bottom: 1.5px solid #b8b8b8;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-bottom-color: black;
+    outline: none !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #b8b8b8;
+  }
+
+  textarea {
+    width: 340px;
+    height: 145px;
+    // border-radius: 10px;
+    margin: 17px 0;
+    border: none;
+    border-bottom: 1.5px solid #b8b8b8;
+  }
+
+  .btn-flat {
+    color: white !important;
+    padding: 8px 24px;
+    border-radius: 6px;
+    background: rgb(110, 94, 254);
+    transition: background 0.3s ease;
+    border: 2px solid rgb(110, 94, 254);
+    // margin: 2px;
+    margin-top: 20px;
+    width: 200px;
+  }
+
+  .btn-flat:hover {
+    background: #ffffff;
+    color: rgb(110, 94, 254) !important;
+    border: 2px solid rgb(110, 94, 254);
+    margin: 0;
+    // padding: 8px 24px;
+    border-radius: 6px !important;
+    margin-top: 20px;
+  }
+}
