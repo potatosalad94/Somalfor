@@ -22,7 +22,7 @@
   // }
 }
 
-.appFormGroup {
+.formControl {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@
     border-bottom: 1.5px solid #b8b8b8;
   }
 
-  .btn-flat {
+  button {
     color: white !important;
     padding: 8px 24px;
     border-radius: 6px;
@@ -66,7 +66,7 @@
     width: 200px;
   }
 
-  .btn-flat:hover {
+  button:hover {
     background: #ffffff;
     color: rgb(110, 94, 254) !important;
     border: 2px solid rgb(110, 94, 254);
@@ -74,5 +74,24 @@
     // padding: 8px 24px;
     border-radius: 6px !important;
     margin-top: 20px;
+  }
+
+  button:disabled,
+  button:disabled:hover,
+  button:disabled:active {
+    background-color: #ccc;
+    color: #777777 !important;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .invalid,
+  .invalid:focus {
+    border-bottom: 1.5px solid red;
+    // background-color: #fddddd;
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 }
