@@ -1,9 +1,25 @@
 import { Container } from "react-bootstrap";
+import { useState } from "react";
 import styles from "./Contact.module.scss";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
 import useInput from "../../hooks/use-input";
+import PulseLoader from "react-spinners/PulseLoader";
+
+toast.configure();
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const notify = (toastType, text) => {
+    if (toastType === "success") {
+      toast.success(text, { position: toast.POSITION.BOTTOM_RIGHT });
+    } else {
+      toast.error(text, { position: toast.POSITION.BOTTOM_RIGHT });
+    }
+  };
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -37,6 +53,7 @@ const Contact = () => {
   }
 
   const sendEmail = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -48,9 +65,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          setIsLoading(false);
+          notify("success", "Votre message a bien été envoyé");
         },
         (error) => {
           console.log(error.text);
+          setIsLoading(false);
+          notify("error", "un problème s'est produit");
         }
       );
 
@@ -123,7 +144,11 @@ const Contact = () => {
               className={styles["btn-flat"]}
               type="submit"
             >
-              Envoyer
+              {!isLoading ? (
+                "Envoyer"
+              ) : (
+                <PulseLoader color="#FFFFFF" loading={isLoading} size={11} />
+              )}
             </button>
           </div>
         </form>
